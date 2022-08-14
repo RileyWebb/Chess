@@ -2,9 +2,8 @@
 {
     public class Rook : Piece
     {
-        public Rook(Game game, Player player) : base(game, player)
+        public Rook()
         {
-            Unicode = '♖';
         }
 
         public override bool CanMove(int x, int y)

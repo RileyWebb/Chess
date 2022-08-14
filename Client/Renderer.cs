@@ -1,15 +1,30 @@
 ﻿using System.Drawing;
+using System.Drawing.Drawing2D;
+using System.Drawing.Imaging;
+using Chess;
 
 namespace Client
 {
     public class Renderer
     {
+        public Client Client;
+        public Window Window;
+        
+        public Rectangle Viewport;
+        public Graphics Graphics;
+        public BufferedGraphics Buffer;
+
+        private Bitmap _board;
+        
         public Renderer(Client client)
         {
             //DRAW BOARD AND SCALE ON EACH FRAME
+
+            Client = client;
+            Window = client.Window;
             
-            //window.ClientSizeChanged += (sender, e) => Resize(window.ClientRectangle);
-            //Resize(window.ClientRectangle);
+            Window.ClientSizeChanged += (sender, e) => Resize(Window.ClientRectangle);
+            Resize(Window.ClientRectangle);
         }
 
         public void Render()
@@ -66,15 +81,55 @@ namespace Client
 
         public void Resize(Rectangle viewport)
         {
-            //_viewport = viewport;
-            
-            //_buffer = BufferedGraphicsManager.Current.Allocate(_graphics, _viewport);
-            
-            //_buffer.Graphics.CompositingMode = CompositingMode.SourceCopy;
-            //_buffer.Graphics.CompositingQuality = CompositingQuality.AssumeLinear;
-            //_buffer.Graphics.InterpolationMode = InterpolationMode.NearestNeighbor;
-            //_buffer.Graphics.SmoothingMode = SmoothingMode.None;
-            //_buffer.Graphics.PixelOffsetMode = PixelOffsetMode.Half;
         }
+        /*
+        Viewport = viewport;
+        
+        Buffer = BufferedGraphicsManager.Current.Allocate(_graphics, _viewport);
+        
+        Buffer.Graphics.CompositingMode = CompositingMode.SourceCopy;
+        Buffer.Graphics.CompositingQuality = CompositingQuality.AssumeLinear;
+        Buffer.Graphics.InterpolationMode = InterpolationMode.NearestNeighbor;
+        Buffer.Graphics.SmoothingMode = SmoothingMode.None;
+        Buffer.Graphics.PixelOffsetMode = PixelOffsetMode.Half;
+
+        _board = DrawBoard(Viewport.Size);
+        for (int x = 0; x < _game.Board.Width; x++)
+        for (int y = 0; y < _game.Board.Height; y++)
+        {
+            Color c;
+
+            if ((y % 2 == 0 ? 1 : 0) + x % 2 == 1)
+                c = _colorOdd;
+            else
+                c = _colorEven;
+        }
+    }
+
+    private unsafe Bitmap DrawBoard(Board board)
+    {
+        Bitmap bitmap = new Bitmap(Board.Width, Board.Height);
+        BitmapData bData = bitmap.LockBits(new Rectangle(0, 0, Board.Width, Board.Height), ImageLockMode.ReadWrite, bitmap.PixelFormat);
+
+        int bpp = Image.GetPixelFormatSize(bData.PixelFormat);
+        byte* scan0 = (byte*)bData.Scan0.ToPointer();
+
+        for (int y = 0; y < Board.Width; ++y)
+        {
+            for (int x = 0; x < Board.Height; ++x)
+            {
+                byte* data = scan0 + x * bData.Stride + y * bpp / 8;
+                
+                if ((y % 2 == 0 ? 1 : 0) + x % 2 == 1)
+                
+                data[0] = ;
+                data[1] = ;
+                data[2] = ;
+                data[3] = 255;
+            }
+        }
+
+        bitmap.UnlockBits(bData);
+    } */
     }
 }

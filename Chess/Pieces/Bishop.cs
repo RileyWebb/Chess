@@ -2,9 +2,9 @@
 {
     public class Bishop : Piece
     {
-        public Bishop(Game game, Player player) : base(game, player)
+        public Bishop() : base()
         {
-            Unicode = '♗';
+
         }
 
         public override bool CanMove(int x, int y)

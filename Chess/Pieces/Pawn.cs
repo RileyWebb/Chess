@@ -2,9 +2,8 @@
 {
     public class Pawn : Piece
     {
-        public Pawn(Game game, Player player) : base(game, player)
+        public Pawn()
         {
-            Unicode = '♙';
         }
 
         public override bool CanMove(int x, int y)

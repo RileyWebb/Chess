@@ -10,7 +10,7 @@ namespace Client
         public Game Game;
         public Renderer Renderer;
         public Input Input;
-        
+
         public bool Running;
         public DateTime last = DateTime.Now;
         public int Ticks = 0;
@@ -22,14 +22,18 @@ namespace Client
         public Window(Game game, int width, int height)
         {
             Game = game;
-            Input = new Input(this);
-            Renderer = new Renderer(this);
+            //Input = new Input(this);
+            //Renderer = new Renderer(this);
 
             Text = "Chess";
-            
+
             ClientSize = new Size(width, height);
-            
-            Closing += (sender, e) => { e.Cancel = true; Quit(); };
+
+            Closing += (sender, e) =>
+            {
+                e.Cancel = true;
+                Quit();
+            };
         }
 
         public void Start()
@@ -44,7 +48,7 @@ namespace Client
         public void Update()
         {
             Renderer.Render();
-            
+
             Application.DoEvents();
 
             if ((DateTime.Now - last).TotalMilliseconds > 1000)
@@ -61,4 +65,5 @@ namespace Client
         {
             Running = false;
         }
+    }
 }

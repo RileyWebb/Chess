@@ -2,9 +2,8 @@
 {
     public class Queen : Piece
     {
-        public Queen(Game game, Player player) : base(game, player)
+        public Queen()
         {
-            Unicode = '♕';
         }
 
         public override bool CanMove(int x, int y)
