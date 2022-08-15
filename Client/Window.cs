@@ -7,9 +7,9 @@ namespace Client
 {
     public sealed class Window : Form
     {
-        public Game Game;
-        public Renderer Renderer;
+        public Client Client;
         public Input Input;
+        public Renderer Renderer;
 
         public bool Running;
         public DateTime last = DateTime.Now;
@@ -19,15 +19,15 @@ namespace Client
         //{
         //}
 
-        public Window(Game game, int width, int height)
+        public Window(Client client)
         {
-            Game = game;
-            //Input = new Input(this);
-            //Renderer = new Renderer(this);
+            Client = client;
+            Input = new Input(this);
+            Renderer = new Renderer(this);
 
             Text = "Chess";
 
-            ClientSize = new Size(width, height);
+            ClientSize = new Size(80*8, 80*8);
 
             Closing += (sender, e) =>
             {

@@ -27,34 +27,32 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Riley\\.nuget\\packages\\": {}
+    "C:\\Users\\WEB0018\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Riley\\Documents\\Programming\\Chess\\Server\\Server.csproj",
+      "projectUniqueName": "C:\\Users\\WEB0018\\OneDrive - Eltham High School\\Documents\\Programming\\Chess\\Server\\Server.csproj",
       "projectName": "Server",
-      "projectPath": "C:\\Users\\Riley\\Documents\\Programming\\Chess\\Server\\Server.csproj",
-      "packagesPath": "C:\\Users\\Riley\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Riley\\Documents\\Programming\\Chess\\Server\\obj\\",
+      "projectPath": "C:\\Users\\WEB0018\\OneDrive - Eltham High School\\Documents\\Programming\\Chess\\Server\\Server.csproj",
+      "packagesPath": "C:\\Users\\WEB0018\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\WEB0018\\OneDrive - Eltham High School\\Documents\\Programming\\Chess\\Server\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Riley\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\WEB0018\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Riley\\Documents\\Programming\\Chess\\Chess\\Chess.csproj": {
-              "projectPath": "C:\\Users\\Riley\\Documents\\Programming\\Chess\\Chess\\Chess.csproj"
+            "C:\\Users\\WEB0018\\OneDrive - Eltham High School\\Documents\\Programming\\Chess\\Chess\\Chess.csproj": {
+              "projectPath": "C:\\Users\\WEB0018\\OneDrive - Eltham High School\\Documents\\Programming\\Chess\\Chess\\Chess.csproj"
             }
           }
         }
@@ -83,7 +81,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
       }
     }
   }

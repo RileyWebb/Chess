@@ -2,6 +2,9 @@
 {
     public class Input
     {
-        
+        public Input(Window window)
+        {
+            
+        }
     }
 }

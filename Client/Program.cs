@@ -1,10 +1,12 @@
+using System;
+
 namespace Client
 {
     static class Program
     {
-        static void Main()
+        public static void Main(string[] args)
         {
-
+            new Client().Start();
         }
     }
 }
